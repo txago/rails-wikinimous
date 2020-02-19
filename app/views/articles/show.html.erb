@@ -1,0 +1,9 @@
+<h1 class="border-bottom py-4 my-4"><%= @article.title %></h1>
+<div class="border-bottom pb-2 mb-4">
+  <p><%= @article.content %></p>
+</div>
+<div class="border-bottom pb-4 mb-3">
+  <%= link_to 'Back home', articles_path, class: 'btn btn-outline-info' %>
+  <%= link_to 'Edit article', edit_article_path(@article), class: 'btn btn-outline-info' %>
+  <%= link_to 'Delete article', article_path(@article), method: :delete, class: 'btn btn-outline-danger', data: { confirm: 'Are you sure?' } %>
+</div>
